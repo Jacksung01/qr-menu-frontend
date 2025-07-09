@@ -4,10 +4,9 @@ import axios from 'axios';
 function App() {
   const [menu, setMenu] = useState([]);
   const [cart, setCart] = useState([]);
-  const [table, setTable] = useState("1"); // ตัวอย่าง: โต๊ะ 1
+  const [table, setTable] = useState("1");
 
   useEffect(() => {
-    // ดึงพารามิเตอร์ ?table=5 จาก URL
     const params = new URLSearchParams(window.location.search);
     const tableNumber = params.get('table');
     if (tableNumber) setTable(tableNumber);
@@ -53,3 +52,15 @@ function App() {
       ) : (
         <>
           <ul>
+            {cart.map((item, index) => (
+              <li key={index}>{item.name}</li>
+            ))}
+          </ul>
+          <button onClick={sendOrder}>ส่งออเดอร์</button>
+        </>
+      )}
+    </div>
+  );
+}
+
+export default App;
