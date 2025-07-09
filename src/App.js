@@ -48,7 +48,7 @@ function App() {
 
       <hr />
       <h2>ตะกร้าอาหาร</h2>
-      {cart.map === 0 ? <p>ยังไม่มีรายการ</p> : (
+      {cart.length === 0 ? <p>ยังไม่มีรายการ</p> : (
         <>
           <ul>
             {cart.map((item, index) => (
