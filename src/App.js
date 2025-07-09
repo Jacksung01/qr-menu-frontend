@@ -27,11 +27,9 @@ function App() {
     }
 
     axios.post('https://qr-menu-backend-2r1h.onrender.com/order', {
-  table,
-  items,
-  note: ""
-});
-
+      table,
+      items,
+      note: ""
     }).then(() => {
       alert("ส่งออเดอร์เรียบร้อยแล้ว");
       setCart([]);
