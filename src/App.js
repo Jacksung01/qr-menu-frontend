@@ -28,7 +28,7 @@ function App() {
 
     axios.post('https://qr-menu-backend-2r1h.onrender.com/order', {
       table,
-      items,
+      items: cart,
       note: ""
     }).then(() => {
       alert("ส่งออเดอร์เรียบร้อยแล้ว");
@@ -48,18 +48,8 @@ function App() {
 
       <hr />
       <h2>ตะกร้าอาหาร</h2>
-      {cart.length === 0 ? <p>ยังไม่มีรายการ</p> : (
+      {cart.length === 0 ? (
+        <p>ยังไม่มีรายการ</p>
+      ) : (
         <>
           <ul>
-            {cart.map((item, index) => (
-              <li key={index}>{item.name}</li>
-            ))}
-          </ul>
-          <button onClick={sendOrder}>ส่งออเดอร์</button>
-        </>
-      )}
-    </div>
-  );
-}
-
-export default App;
