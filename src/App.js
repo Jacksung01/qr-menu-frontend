@@ -1,14 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CustomerMenu from './CustomerMenu';
-import AdminDashboard from './AdminDashboard';
+// src/App.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CustomerMenu from "./pages/CustomerMenu";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/" element={<CustomerMenu />} />
+        <Route path="/admin" element={<AdminDashboard />} />
       </Routes>
     </Router>
   );
