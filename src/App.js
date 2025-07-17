@@ -1,8 +1,8 @@
 // src/App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import CustomerMenu from "./Pages/CustomerMenu";
-import AdminDashboard from "./Pages/AdminDashboard";
+import CustomerMenu from "./pages/CustomerMenu";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (
